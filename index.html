@@ -1,0 +1,205 @@
+<html>
+
+<head>
+    <link rel="StyleSheet" href="style.css" type="text/css" media="all">
+    <title>Deep Hybrid Self-Prior</title>
+    <meta property="og:title" content="Deep Hybrid Self-Prior for Full 3D Mesh Generation">
+    <meta property="og:image" content="https://www.cs.cmu.edu/~wyuan1/cmr/resources/images/shapenet.png">
+    <meta property="og:url" content="https://youtu.be/bzJrPQilPxg">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+    <br>
+    <div class="center-div">
+        <span style="font-size:40px">Deep Hybrid Self-Prior for Full 3D Mesh Generation</span>
+    </div>
+
+    <br>
+    <table align="center" width="800px">
+        <tbody>
+            <tr>
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Xingkui Wei</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="120px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Zhengqing Chen</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Yanwei Fu</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Zhaopeng Cui</a></span>
+                    </div>
+                </td>
+
+                 <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Yinda Zhang</a></span>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px">Fudan University &nbsp; &nbsp; Zhejiang University &nbsp; &nbsp; Google</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <table align="center" width="600px">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <img src="./resources/images/teaser_plant.png" width="1100px"></a><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <span style="font-size:14px">We propose to utilize the deep hybrid 2D-3D self-prior in neural networks to generate the high-quality textured 3D mesh model from the sparse colored point cloud.
+                        </span></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1>Abstract</h1>
+    </div>
+    <p>
+        We present a deep learning pipeline that leverages network self-prior to recover a full 3D model consisting of both a triangular mesh and a texture map from the colored 3D point cloud. 
+		Different from previous methods either exploiting 2D self-prior for image editing or 3D self-prior for pure surface reconstruction, 
+		we propose to exploit a novel hybrid 2D-3D self-prior in deep neural networks to significantly improve the geometry quality and produce a high-resolution texture map, which is typically missing from the output of commodity-level 3D scanners.
+		In particular, we first generate an initial mesh using a 3D convolutional neural network with 3D self-prior, and then encode both 3D information and color information in the 2D UV atlas, which is further refined by 2D convolutional neural networks with the self-prior. In this way, both 2D and 3D self-priors are utilized for the mesh and texture recovery.
+		Experiments show that, without the need of any additional training data, our method recovers the 3D textured mesh model of high quality from sparse input, and outperforms the state-of-the-art methods in terms of both the geometry and texture quality.
+    </p>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="code">Network Architecture</h1>
+    </div>
+    <table align="center" width="600px">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <img class="round" style="height:600" src="./resources/images/architecture.png">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <span style="font-size:14px">Overview of our method. Our full model contains two building blocks, namely, 3D deep self-prior network, and 2D deep self-prior network, which run iteratively to improve the geometry and texture outputs.
+                        </span></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="paper">Paper, Code and Data</h1>
+    </div>
+    <table align="center" width="600px">
+
+        <tbody>
+            <tr>
+                <td>
+                    <img class="layered-paper-big" style="height:175px" src="./resources/images/page1.png">
+                </td>
+                <td>
+                    <span style="font-size:14pt">X. Wen, Z. Chen, Y. Fu., Z. Cui, Y. Zhang</span>
+                    <br><br>
+                    <b><span style="display:inline-block;width:600px;font-size:14pt">Deep Hybrid Self-Prior for Full 3D Mesh Generation.</span></b>
+                    <br><br>
+                    <span style="font-size:14pt">ICCV, 2021.</span>
+                    <br><br>
+                    <span style="font-size:20px">
+                        <a href="https://arxiv.org/">[arXiv]</a> &nbsp; &nbsp;
+                        <a href="./resources/bibtex.txt">[Bibtex]</a> &nbsp; &nbsp; 
+                        <a>Codes coming soon</a> &nbsp; &nbsp;
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="code">Results</h1>
+    </div>
+    <div class="center-div">
+	    <table align="center" width="600px">
+	        <tbody>
+	            <tr>
+	                <td>
+	                    <div class="center-div">
+	                        <img src="./resources/images/realworldresults.png" width="1000px"></a><br>
+	                    </div>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td>
+	                    <div class="center-div">
+	                        <span style="font-size:14px">Comparison between our method and other surface reconstruction methods with real scans.
+	                        </span></div>
+	                </td>
+	            </tr>
+	        </tbody>
+	    </table>
+    </div>
+    
+    <br><br>
+    <hr>
+    <table align="center" width="980px">
+        <tbody>
+            <tr>
+                <td>
+                    <left>
+                        <div class="center-div">
+                            <h1>Acknowledgements</h1>
+                        </div>
+                        <div class="center-div">
+                         Yinda Zhang, Zhaopeng Cui, and Yanwei Fu are the corresponding authours.This work was supported in part by NSFC Project under Grant 62076067. The websiteis
+                        modified from this <a href="https://walsvid.github.io/Pixel2MeshPlusPlus/">template</a>.
+                        </div>
+                    </left>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+
+</body>
+
+</html>
